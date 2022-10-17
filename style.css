@@ -63,7 +63,7 @@ header{
 }
 
 .icons:hover, .icons:focus{
-    transform: rotateX(180deg);
+    transform: rotateX(48deg);
 }
 .text-height{
     height: 16px;
