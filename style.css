@@ -1,0 +1,52 @@
+body{
+    background-color: #FFFFFF;
+    margin: 50px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 13px;
+}
+.container{
+    width: 375px;
+    margin: 0 auto;
+    border: 1px red solid;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #C6C6C6;
+}
+
+.oldagram-logo{
+    width: 127px;
+    height: 64px;
+}
+
+.top-section{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.avatar{
+    height: 34px;
+    border-radius: 50%;
+}
+
+.name{
+    margin-left: 10px;
+    
+}
+
+.font700{
+    font-weight: 700;
+}
+
+.image-post{
+    width: 375px;
+}
+.bottom-section{
+    padding: 15px;
+}
+.icons{
+    width: 36px;
+}
