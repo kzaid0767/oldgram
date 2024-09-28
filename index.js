@@ -1,6 +1,17 @@
 let posts = [
     {
         id:1,
+        name: "Kassim Zaid",
+        username: "kabuza515",
+        location:"ATL, Georgia",
+        avatar:"images/mebearded.jpg",
+        post: "images/mebearded.jpg",
+        comment: "just easy skanking!",
+        likes: 33,
+        isLiked: false
+    },
+    {
+        id:2,
         name: "Vincent van Gogh",
         username: "vincey1853",
         location: "Zundert, Netherlands",
@@ -11,7 +22,7 @@ let posts = [
         isLiked: false
     },
     {
-        id:2,
+        id:3,
         name: "Gustave Courbet",
         username: "gus1819",
         location: "Ornans, France",
@@ -22,7 +33,7 @@ let posts = [
         isLiked: false
     },
         {
-        id:3,
+        id:4,
         name: "Joseph Ducreux",
         username: "jd1735",
         location: "Paris, France",
