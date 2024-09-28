@@ -28,3 +28,39 @@ const posts = [
     }
 ]
 
+const main = document.getElementById('posts-container')
+
+let htmString = ''
+
+
+function renderPosts(){
+    for(let item of posts){
+        htmString +=`
+            <section>
+                <div class="top-post">
+                    <img class="avatar" src="${item.avatar}" alt="a picture of ${item.name}">
+                    <div class="avar-descriptions">
+                        <h4 class="name"> ${item.name}</h4>
+                        <p class="location"> ${item.location}</p>
+                    </div>
+                </div>
+                <div>
+                    <img class="post" src="${item.post}" alt="a selfie of ${item.name}">
+                </div>
+                <div class="bottom-post">
+                    <div class="icons-containter">
+                        <img class="icon" src="./images/icon-heart.png" alt="like commnet logo">
+                        <img class="icon" src="./images/icon-comment.png" alt="comment on post logo">
+                        <img class="icon" src="./images/icon-dm.png" alt="send dm logo">
+                    </div>
+                    <p class="likes">${item.likes} likes</p>
+                    <p class="comment">${item.username} ${item.comment}</p>
+                </div>
+            </section>
+        ` 
+    }
+
+    main.innerHTML = htmString
+}
+
+renderPosts()
