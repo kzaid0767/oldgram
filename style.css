@@ -10,6 +10,10 @@ html, body {
     margin: 0 auto;
 }
 
+section{
+    margin-bottom: 0.5rem;
+}
+
 /* Header styles */
 .main-header{
     display: flex;
@@ -61,7 +65,19 @@ html, body {
     width: 2rem;
     margin-right: 0.5rem;
 }
+.likes, .comment{
+    margin: 0;
+    margin-right: 0.7rem;
+}
 
+.icon:hover{
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+.likes, span{
+    font-weight:bolder;
+}
 .bottom-post{
     padding-left: 0.5rem;
 }

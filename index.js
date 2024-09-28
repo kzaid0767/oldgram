@@ -1,5 +1,6 @@
-const posts = [
+let posts = [
     {
+        id:0,
         name: "Vincent van Gogh",
         username: "vincey1853",
         location: "Zundert, Netherlands",
@@ -9,6 +10,7 @@ const posts = [
         likes: 21
     },
     {
+        id:1,
         name: "Gustave Courbet",
         username: "gus1819",
         location: "Ornans, France",
@@ -18,6 +20,7 @@ const posts = [
         likes: 4
     },
         {
+        id:2,
         name: "Joseph Ducreux",
         username: "jd1735",
         location: "Paris, France",
@@ -30,11 +33,24 @@ const posts = [
 
 const main = document.getElementById('posts-container')
 
-let htmString = ''
+
+document.addEventListener("click",handleLike)
+
+function handleLike(e){
+    let num = Number(e.target.id)
+    // find object
+    let obj = posts.find(item => item.id === num)
+    
+    //updating found object
+    obj.likes +=1
+    posts[num] = obj
+    renderPosts(posts)
+}
 
 
-function renderPosts(){
-    for(let item of posts){
+function renderPosts(arr){
+    let htmString = ''
+    for(let item of arr){
         htmString +=`
             <section>
                 <div class="top-post">
@@ -49,12 +65,13 @@ function renderPosts(){
                 </div>
                 <div class="bottom-post">
                     <div class="icons-containter">
-                        <img class="icon" src="./images/icon-heart.png" alt="like commnet logo">
+                        <img class="icon" src="./images/icon-heart.png" 
+                            alt="like comment logo" id="${item.id}">
                         <img class="icon" src="./images/icon-comment.png" alt="comment on post logo">
                         <img class="icon" src="./images/icon-dm.png" alt="send dm logo">
                     </div>
                     <p class="likes">${item.likes} likes</p>
-                    <p class="comment">${item.username} ${item.comment}</p>
+                    <p class="comment"><span>${item.username}</span> ${item.comment}</p>
                 </div>
             </section>
         ` 
@@ -63,4 +80,4 @@ function renderPosts(){
     main.innerHTML = htmString
 }
 
-renderPosts()
+renderPosts(posts)
